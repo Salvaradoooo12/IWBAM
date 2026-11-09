@@ -1,7 +1,6 @@
-IWBAM 1.3
-
-IMPORTANTE: antes de actualizar, exporta respaldo de 1.2. Publica sobre el MISMO dominio y sitio Netlify. No borres los datos de Safari.
-
-IWBAM 1.3 mantiene la clave localStorage iwbam-v1 y los movimientos previos. Nuevas funciones: metas virtuales, calendario, pagos recurrentes confirmados, préstamos, conciliación, filtros, Excel XML, PDF mediante impresión y respaldos manuales cifrados.
-
-Limitaciones: los datos permanecen en este dispositivo; no hay sincronización ni conexión bancaria. Los respaldos cifrados requieren HTTPS y contraseña; si se pierde la contraseña no se puede restaurar. Los movimientos vinculados a préstamos deben gestionarse cuidadosamente al editar o eliminar.
+IWBAM 1.4 — Actualización estética sobre IWBAM 1.3.
+Diseño premium oscuro, tarjetas renovadas, transiciones, navegación mejorada y botón de privacidad visual.
+La clave de almacenamiento permanece iwbam-v1.
+PUBLICACIÓN: subir los archivos extraídos al mismo repositorio y misma ruta de GitHub Pages.
+IMPORTANTE: exportar primero un respaldo cifrado. Esperar a que la actualización se descargue y reiniciar la app si se ve la versión anterior.
+El botón Ocultar difumina montos en pantalla, no cifra ni protege los datos.

@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-title" content="IWBAM">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
-<title>IWBAM · Finanzas personales</title>
+<title>IWBAM 1.4 · Finanzas personales</title>
 <style>
 :root{color-scheme:dark;--bg:#0d141b;--panel:#151f28;--panel2:#1c2933;--line:#2b3a45;--text:#f3f6f7;--muted:#9aabb5;--green:#c5ef78;--red:#ff8585;--blue:#83c7ff;--radius:18px}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
@@ -20,7 +20,7 @@ h1{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:1px;margin:0
 </head>
 <body>
 <div class="app">
-<header class="top"><div class="brand"><div class="logo">IW</div><div>IWBAM<div class="sub">TU CONTROL FINANCIERO · V1.3</div></div></div><div class="pill" id="monthLabel"></div></header>
+<header class="top"><div class="brand"><div class="logo">IW</div><div>IWBAM<div class="sub">TU CONTROL FINANCIERO · V1.4</div></div></div><div class="pill" id="monthLabel"></div></header>
 
 <section id="home" class="view active">
  <div class="balance">
@@ -228,5 +228,30 @@ async function restore13(e){const f=e.target.files[0];if(!f)return;try{if(f.size
 function drawSecurity(){const node=$('v13Security');if(!node)return;node.innerHTML=`<h3 style="margin-top:0">Seguridad y reportes · 1.3</h3><p class="v13small">Respaldo manual cifrado AES-256-GCM con contraseña derivada mediante PBKDF2. La contraseña no se guarda. Sin nube ni sincronización.</p><div class="v13tools"><button class="secondary" onclick="backup()">⬇ Respaldo cifrado</button><button class="secondary" onclick="$('restoreFile').click()">⬆ Restaurar</button></div><div class="v13tools"><button class="secondary" onclick="excel13()">Exportar Excel</button><button class="secondary" onclick="pdf13()">Reporte PDF</button></div><p class="v13small">El reporte Excel usa XML compatible con Excel. El PDF se guarda mediante la opción de imprimir del navegador. El bloqueo con PIN no se implementa en esta versión: un PIN sin cifrado de la base de datos no protegería adecuadamente los datos.</p>`}
 // Preserve existing data on upgrade. No writes during initialization until user makes a change.
 render();
+</script>
+<style>
+
+/* IWBAM 1.4 · visual refresh; no changes to financial storage */
+:root{--bg:#090f1b;--panel:#111d2b;--panel2:#1a2a39;--line:#293b4c;--text:#f5f9ff;--muted:#a2b3c4;--green:#a9f1b7;--red:#ff9b9f;--blue:#89c6ff;--radius:21px}
+html{scroll-behavior:smooth}body{background:radial-gradient(ellipse 95% 35% at 85% -5%,#1a4052 0%,transparent 75%),radial-gradient(ellipse 70% 30% at 0% 40%,#17233e 0%,transparent 75%),var(--bg);background-attachment:fixed;line-height:1.48;-webkit-tap-highlight-color:transparent}
+.app{padding:18px 17px 112px}.top{margin:9px 0 26px;gap:10px}.brand{font-size:23px;letter-spacing:-.6px}.logo{width:45px;height:45px;border-radius:15px;background:linear-gradient(135deg,#c9ffd4,#68d4b3);color:#10352b;box-shadow:0 8px 30px #69e5bd33;letter-spacing:-1px}.sub{font-size:10px;letter-spacing:1.25px;margin-top:1px}.pill{border-color:#3a5865;background:#142737b8;color:#c8e3e4;font-weight:600;white-space:nowrap}
+.balance{position:relative;overflow:hidden;border:1px solid #477b7b;background:linear-gradient(120deg,#183a41 0%,#1c3744 48%,#19293e 100%);box-shadow:0 18px 44px #02081088, inset 0 1px #ffffff16;border-radius:27px;padding:23px 21px 21px}.balance:before{content:'';position:absolute;width:220px;height:220px;right:-86px;top:-100px;border-radius:50%;border:32px solid #a7f5c70d;pointer-events:none}.balance:after{content:'';position:absolute;width:180px;height:180px;right:-90px;bottom:-120px;border-radius:50%;background:#9ceec71a;filter:blur(10px);pointer-events:none}.balance h1{color:#c7d9dd;font-size:11px;letter-spacing:1.6px}.amount{font-size:clamp(32px,8vw,43px);letter-spacing:-1.7px;line-height:1.2;margin:10px 0 22px;font-variant-numeric:tabular-nums;position:relative;z-index:1}.stats{gap:9px}.stat{background:#ffffff10;border:1px solid #ffffff19;border-radius:15px;backdrop-filter:blur(8px);padding:13px}.stat small{font-size:11px;color:#c8dadd}.stat strong{font-size:clamp(14px,4vw,20px);font-variant-numeric:tabular-nums}.positive{color:#a9f1b7}.negative{color:#ffa8ac}
+.grid{gap:9px;margin:15px 0}.account{min-width:0;background:linear-gradient(160deg,#182938,#101c2a);border-color:#2a4150;border-radius:18px;padding:13px 10px;box-shadow:0 8px 22px #03070d3b}.account span{font-size:11px}.account b{font-size:clamp(12px,3.3vw,16px);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.section{margin-top:26px}.sectionhead{margin-bottom:13px}.sectionhead h2{font-size:17px;letter-spacing:-.35px}.card{background:linear-gradient(155deg,#142332,#101c29);border:1px solid #2c4151;border-radius:22px;padding:17px;box-shadow:0 9px 26px #02071044}.actions{gap:10px;margin:17px 0}.action{min-height:84px;background:linear-gradient(160deg,#1c3340,#142333);border:1px solid #355063;border-radius:19px;box-shadow:0 7px 18px #02071055;font-size:12px;transition:transform .16s ease,border-color .16s ease,background .16s ease}.action span{font-size:24px;margin-bottom:7px;color:#b7f2c5}.action:active,.primary:active,.secondary:active,.mini:active{transform:scale(.96)}.action:hover{border-color:#82bcae}.link{font-weight:700;color:#b5efc3;padding:8px 2px}.progress,.v13bar{background:#263c48;height:10px}.bar,.v13bar>i{background:linear-gradient(90deg,#55c8a6,#c4f7a2);box-shadow:0 0 16px #82f0bd55;transition:width .5s ease}.v13grid{gap:10px}.v13box{background:#1a3040;border:1px solid #2b4656;border-radius:16px;padding:14px}.v13box b{font-size:clamp(14px,3.8vw,19px);overflow-wrap:anywhere}.v13small{color:#adc0cf;line-height:1.5}.v13tools{gap:8px}.v13tools button{min-width:0}.v13line{padding:15px 0}.v13days button{border-radius:11px;min-height:38px}.v13days button.has{border-color:#83d7ae;background:#21423e}.v13days button:active{background:#3b635d}.tx{gap:10px;padding:14px 0}.txname{font-size:14px}.txamt{font-variant-numeric:tabular-nums}.txmeta{line-height:1.5}.tabs{max-width:760px;margin:auto;left:0;right:0;background:#0e1b2cf2;border:1px solid #314657;border-bottom:0;border-radius:21px 21px 0 0;padding:10px 9px calc(10px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px #0007}.tabs button{border-radius:14px;padding:8px 3px 7px;transition:background .18s,color .18s;font-weight:650}.tabs button.active{color:#c0f8cb;background:#2a51484d}.tabs span{font-size:23px;margin-bottom:4px}.view.active{animation:iwFade .24s ease both}@keyframes iwFade{from{opacity:.65;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.field input,.field select,.v13field input,.v13field select{background:#0e1c2b;border-color:#3b5060;min-height:45px;border-radius:13px}.field input:focus,.field select:focus,.v13field input:focus,.v13field select:focus{outline:2px solid #9ce4c3;outline-offset:1px}.primary{background:linear-gradient(110deg,#bdf9be,#77dcbf);border-radius:15px;box-shadow:0 9px 24px #68d9b42a;min-height:49px}.secondary,.mini{border-color:#3b5363;transition:transform .16s ease,background .16s ease}.secondary:hover,.mini:hover{background:#294051}.note{background:#163243;border-left-color:#7bc9dd}.empty{padding:27px 8px}.privacy-toggle{position:absolute;top:18px;right:17px;z-index:2;border:1px solid #ffffff3d;background:#ffffff16;color:#e8f5f3;border-radius:999px;padding:7px 10px;font:600 11px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.privacy-hidden .private-money{filter:blur(8px);user-select:none}.privacy-hidden .private-money::selection{background:transparent}
+@media(max-width:390px){.app{padding-left:13px;padding-right:13px}.v13grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v13box{padding:11px}.v13box b{font-size:13px}.account{padding:10px 7px}.account span{font-size:10px}.account b{font-size:12px}.balance{padding:21px 15px}.stats .stat{padding:10px}.brand{font-size:20px}.sub{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+</style>
+<script>
+// IWBAM 1.4: display-only privacy switch, without changing stored financial data.
+(function(){
+  const card=document.querySelector('.balance');
+  if(card){const btn=document.createElement('button');btn.type='button';btn.className='privacy-toggle';btn.setAttribute('aria-pressed','false');btn.textContent='◉ Ocultar';card.appendChild(btn);
+    const mark=()=>{document.querySelectorAll('#totalBalance,#monthIncome,#monthExpense,.account b,.v13box b,#savingTarget,#savingActual').forEach(el=>el.classList.add('private-money'))};
+    const obs=new MutationObserver(mark);obs.observe(document.querySelector('.app'),{childList:true,subtree:true});mark();
+    btn.addEventListener('click',()=>{const hidden=document.body.classList.toggle('privacy-hidden');btn.textContent=hidden?'◎ Mostrar':'◉ Ocultar';btn.setAttribute('aria-pressed',String(hidden))});
+  }
+  document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-label',b.textContent.trim()));
+})();
 </script>
 </body></html>
