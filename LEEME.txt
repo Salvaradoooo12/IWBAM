@@ -1,14 +1,3 @@
-IWBAM 1.6 — Solo animación de bienvenida
-
-Basada en IWBAM 1.4: sin inicio de sesión ni cuentas Google/Apple.
-Mantiene la clave de almacenamiento iwbam-v1 y las funciones financieras.
-
-INSTALACIÓN EN GITHUB PAGES:
-1. Haz primero un respaldo cifrado desde IWBAM.
-2. Descomprime IWBAM_1_6.zip en tu computador.
-3. En el repositorio IWBAM, sube los ARCHIVOS extraídos (index.html, sw.js, manifest.webmanifest, icon-192.png, icon-512.png, LEEME.txt), no el ZIP.
-4. GitHub debe indicar que se reemplazan index.html y sw.js; confirma con Commit changes.
-5. Espera a GitHub Pages y vuelve a abrir la aplicación en el iPhone. No la desinstales.
-6. Si persiste la versión anterior, prueba recargar la página desde Safari y vuelve a abrirla.
-
-La animación se omite pulsando Omitir animación; con movimiento reducido dura menos.
+IWBAM 1.6.1 — animación de bienvenida de aproximadamente 2.8 segundos, más 0.35 segundos de salida. Sin inicio de sesión.
+Extrae el ZIP y sube los archivos individuales a la raíz del repositorio GitHub Pages, reemplazando index.html y sw.js.
+Antes de actualizar, exporta un respaldo cifrado. No desinstales la PWA ni borres datos del sitio.
