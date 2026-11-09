@@ -1,6 +1,7 @@
-IWBAM 1.5 - Bienvenida animada, acceso local y preparacion de Google Identity Services.
+IWBAM 1.5 — Bienvenida animada sin inicio de sesión.
 
-Publica estos archivos en la misma raiz del repositorio GitHub Pages. No elimines los datos del navegador.
-Para activar Google, crea un OAuth Client ID tipo Web application en Google Cloud y registra el origen https://TUUSUARIO.github.io (sin ruta /IWBAM). Introduce ese ID publico desde la pantalla de bienvenida.
-Google en esta version muestra identidad localmente; NO es una barrera de seguridad ni sincroniza datos. La app conserva los datos financieros de IWBAM 1.4 en el almacenamiento original.
-El acceso local no pide PIN y no protege contra otras personas con acceso al telefono. Realiza respaldos cifrados periodicos.
+Sube los archivos a la raíz de tu repositorio de GitHub Pages y reemplaza los existentes. No cambies la URL de la aplicación.
+
+La pantalla del logo aparece aproximadamente 2 segundos y puede omitirse. Los datos financieros continúan guardándose localmente en el mismo navegador y origen que IWBAM 1.4.
+
+Antes de actualizar, exporta un respaldo cifrado desde la aplicación. No subas tus respaldos ni información personal al repositorio público.
