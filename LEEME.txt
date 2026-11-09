@@ -1,6 +1,6 @@
-IWBAM 1.4 — Actualización estética sobre IWBAM 1.3.
-Diseño premium oscuro, tarjetas renovadas, transiciones, navegación mejorada y botón de privacidad visual.
-La clave de almacenamiento permanece iwbam-v1.
-PUBLICACIÓN: subir los archivos extraídos al mismo repositorio y misma ruta de GitHub Pages.
-IMPORTANTE: exportar primero un respaldo cifrado. Esperar a que la actualización se descargue y reiniciar la app si se ve la versión anterior.
-El botón Ocultar difumina montos en pantalla, no cifra ni protege los datos.
+IWBAM 1.5 - Bienvenida animada, acceso local y preparacion de Google Identity Services.
+
+Publica estos archivos en la misma raiz del repositorio GitHub Pages. No elimines los datos del navegador.
+Para activar Google, crea un OAuth Client ID tipo Web application en Google Cloud y registra el origen https://TUUSUARIO.github.io (sin ruta /IWBAM). Introduce ese ID publico desde la pantalla de bienvenida.
+Google en esta version muestra identidad localmente; NO es una barrera de seguridad ni sincroniza datos. La app conserva los datos financieros de IWBAM 1.4 en el almacenamiento original.
+El acceso local no pide PIN y no protege contra otras personas con acceso al telefono. Realiza respaldos cifrados periodicos.
